@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='create_account.css') }}">
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form method="POST" action="{{ url_for('create_account') }}">
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" name="confirm_password" required>
+        <br>
+        <label for="user_name">Name:</label>
+        <input type="text" name="user_name" required>
+        <br>
+        <label for="user_surname">Surname:</label>
+        <input type="text" name="user_surname" required>
+        <br>
+        <input type="submit" value="Create Account">
+    </form>
+    <p>{{ message }}</p>
+
+    <!-- Placeholder image for JSW Steel logo -->
+    <img src="{{ url_for('static', filename='Jsw_Logo.png') }}" alt="JSW Steel Logo">
+</body>
+</html>

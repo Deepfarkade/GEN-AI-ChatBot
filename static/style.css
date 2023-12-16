@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Set black background for the entire page */
+    color: #333; /* Set text color to white */
+}
+
+
+#chat-container {
+    max-width: 1250px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#chat-history {
+    padding: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre-line;
+}
+
+.message {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.user-message {
+    background-color: #b9d6e9;
+    color: rgb(26, 26, 26);
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #e0e0e0;
+    color: #333;
+    text-align: left;
+}
+
+#user-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#send-button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#new-response-div {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#new-response-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#new-question-input,
+#new-response-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#background-logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#background-logo img {
+    width: 100px;
+    border-radius: 50%; /* Optional: add border-radius for a circular logo */
+}
+
+.custom-table {
+    font-size: 10px; /* Adjust the font size as needed */
+    max-height: 250px; /* Set max height for the table */
+    overflow: hidden; /* Hide overflow to create a "Show More" effect */
+    position: relative; /* Required for absolute positioning of buttons */
+}
