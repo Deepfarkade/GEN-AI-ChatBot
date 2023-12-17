@@ -15,7 +15,11 @@ import os
 import requests
 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-os.environ['REQUESTS_CA_BUNDLE'] = 'cert.crt'
+#os.environ['REQUESTS_CA_BUNDLE'] = 'cert.crt'
+
+os.environ['REQUESTS_CA_BUNDLE'] = os.path.join(os.getcwd(), 'cacert.pem')
+
+
 
 # Replace "YOUR_API_KEY" with your actual OpenAI API key
 openai.api_key = "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"
