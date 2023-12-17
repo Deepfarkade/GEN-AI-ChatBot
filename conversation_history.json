@@ -186,6 +186,14 @@
         {
           "content": "shing in the ",
           "count": 1
+        },
+        {
+          "content": "hey hi what can you do for me",
+          "count": 1
+        },
+        {
+          "content": "can you show me the total Projected on-hand quantity group wise at month end",
+          "count": 1
         }
       ],
       "prompted_question": null
