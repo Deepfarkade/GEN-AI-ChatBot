@@ -1,0 +1,348 @@
+{
+  "conversations": [
+    {
+      "user_id": "Ayush",
+      "questions": [
+        {
+          "content": "yeh mai hu ya koi aur hai meri tarah",
+          "count": 1
+        },
+        {
+          "content": "Kaise hua?",
+          "count": 2
+        },
+        {
+          "content": "can you please",
+          "count": 1
+        },
+        {
+          "content": "Kaise hua ?",
+          "count": 1
+        },
+        {
+          "content": "more generic questions",
+          "count": 1
+        },
+        {
+          "content": "what can you do for me?",
+          "count": 1
+        },
+        {
+          "content": "Can you tell me the total Customer Order fill rate",
+          "count": 2
+        },
+        {
+          "content": "ok",
+          "count": 1
+        },
+        {
+          "content": "hey hi buddy",
+          "count": 1
+        },
+        {
+          "content": "what",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "deepfarkade",
+      "questions": [
+        {
+          "content": "ok bro hi",
+          "count": 1
+        },
+        {
+          "content": "hey hi",
+          "count": 2
+        },
+        {
+          "content": "hi buddy",
+          "count": 1
+        },
+        {
+          "content": "how can you help me ",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "dd",
+      "questions": [
+        {
+          "content": "hey hi",
+          "count": 6
+        },
+        {
+          "content": "hi",
+          "count": 6
+        },
+        {
+          "content": "hi bro",
+          "count": 1
+        },
+        {
+          "content": "Tell me about Customer Order fill rate?",
+          "count": 3
+        },
+        {
+          "content": "Total FCST Fill rate?",
+          "count": 5
+        },
+        {
+          "content": "can you show me the Total Resource utilisation plant wise?",
+          "count": 11
+        },
+        {
+          "content": "can you show me the total Projected on-hand quantity group wise at month end?",
+          "count": 2
+        },
+        {
+          "content": "total fcst fill rate",
+          "count": 2
+        },
+        {
+          "content": "who made you?",
+          "count": 1
+        },
+        {
+          "content": "Tell me about Customer Order fill rate",
+          "count": 1
+        },
+        {
+          "content": "ok",
+          "count": 2
+        },
+        {
+          "content": "Total Cust type fill rate?",
+          "count": 1
+        },
+        {
+          "content": "Total Cust type fill rate",
+          "count": 1
+        },
+        {
+          "content": " can you show me the Total Resource utilisation plant wise",
+          "count": 1
+        },
+        {
+          "content": "What Root cause Analysis you can do for me?",
+          "count": 1
+        },
+        {
+          "content": "hi bro ",
+          "count": 1
+        },
+        {
+          "content": "sheet ",
+          "count": 1
+        },
+        {
+          "content": "hey hi bro",
+          "count": 1
+        },
+        {
+          "content": "Projected on-hand qty group wise at month end?",
+          "count": 1
+        },
+        {
+          "content": "Tell me about your root cause analysis options",
+          "count": 1
+        },
+        {
+          "content": "can you show me plant wise which is my most critical resource?",
+          "count": 1
+        },
+        {
+          "content": "Yield percentage by location and resource",
+          "count": 1
+        },
+        {
+          "content": "Can you give me the exact resource name on which NOSP items can be produced",
+          "count": 1
+        },
+        {
+          "content": "hey buddy",
+          "count": 1
+        },
+        {
+          "content": "Why the Forecast fill rate is very less in Nov",
+          "count": 1
+        },
+        {
+          "content": "good afternoon",
+          "count": 1
+        },
+        {
+          "content": "what is my name",
+          "count": 1
+        },
+        {
+          "content": "cool",
+          "count": 1
+        },
+        {
+          "content": "shing in the ",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "Prakhar7",
+      "questions": [
+        {
+          "content": "coke studio bharat kya hai ?",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "thonta",
+      "questions": [
+        {
+          "content": "Hi",
+          "count": 1
+        },
+        {
+          "content": "How are you/",
+          "count": 1
+        },
+        {
+          "content": "plant wise most critical resource",
+          "count": 1
+        },
+        {
+          "content": "what is the overall fill rates in nOV month",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "thontaa",
+      "questions": [
+        {
+          "content": "What can you not do?",
+          "count": 1
+        },
+        {
+          "content": "Kaise ho?",
+          "count": 1
+        },
+        {
+          "content": "tum chu ho",
+          "count": 1
+        },
+        {
+          "content": "whats my forecast orde for current month",
+          "count": 1
+        },
+        {
+          "content": "whats my demand forecast for this month",
+          "count": 1
+        },
+        {
+          "content": "whats my resource capacity",
+          "count": 1
+        },
+        {
+          "content": "Res utilisation plant wise",
+          "count": 1
+        },
+        {
+          "content": "Res utilisation plant wise for 3 months",
+          "count": 1
+        },
+        {
+          "content": "Hi",
+          "count": 1
+        },
+        {
+          "content": "whats your mae",
+          "count": 1
+        },
+        {
+          "content": "name",
+          "count": 1
+        },
+        {
+          "content": "is your creator idiot",
+          "count": 1
+        },
+        {
+          "content": "who made you",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "22",
+      "questions": [
+        {
+          "content": "hey hi",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "34",
+      "questions": [
+        {
+          "content": "hi",
+          "count": 1
+        },
+        {
+          "content": "can you show me the Customer type-wise fill rate?",
+          "count": 2
+        },
+        {
+          "content": "Find underutilized resources at each location",
+          "count": 2
+        },
+        {
+          "content": "can you show me plant wise which is my most critical resource?",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "mayur",
+      "questions": [
+        {
+          "content": "hi",
+          "count": 1
+        },
+        {
+          "content": "Yield percentage by location and resource",
+          "count": 1
+        },
+        {
+          "content": "can you show me plant wise which is my most critical resource?",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    },
+    {
+      "user_id": "sameer",
+      "questions": [
+        {
+          "content": "hello my laptop is not working",
+          "count": 1
+        },
+        {
+          "content": "kyo kaise ho tum",
+          "count": 1
+        }
+      ],
+      "prompted_question": null
+    }
+  ]
+}

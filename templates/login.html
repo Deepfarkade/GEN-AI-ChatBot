@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <button onclick="redirectToCreateAccount()">Create Account</button>
+    <p id="bot-message">{{ message }}</p>
+
+    <!-- Placeholder image for JSW Steel logo -->
+    <img src="{{ url_for('static', filename='Jsw_Logo.png') }}" alt="JSW Steel Logo">
+
+    <script>
+        function redirectToCreateAccount() {
+            window.location.href = "{{ url_for('create_account') }}";
+        }
+    </script>
+</body>
+</html>
