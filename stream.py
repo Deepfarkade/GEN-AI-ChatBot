@@ -387,6 +387,6 @@ def chatbot():
 
     return render_template('chatbot.html')  # Adjust the template name as needed
 knowledge_base = load_knowledge_base("knowledge_base.json")    
-if __name__ == '__main__':
+#if __name__ == '__main__':
 #    knowledge_base = load_knowledge_base("knowledge_base.json")
-    app.run(debug=False)
+#    app.run(debug=False)
