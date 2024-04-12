@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://blog.intekfreight-logistics.com/hs-fs/hubfs/supply%20chain%20and%20logistics.jpeg?width=1437&name=supply%20chain%20and%20logistics.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 backdrop-blur-sm">
+    <div class="space-y-2 text-center">
+      <h1 class="text-3xl font-bold text-gray-800">Gen AI RCA Framework for Supply Chain Planning</h1>
+      <p class="text-gray-600">Identify root causes of supply chain issues with AI. Please sign-in to access the platform.</p>
+    </div>
+    {% if error %}
+    <div class="error text-red-500 mt-4">{{ error }}</div>
+    {% endif %}
+    <form method="post" action="{{ url_for('login') }}" class="mt-6">
+      <div class="mb-4">
+        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-gray-700" for="username">
+          Username
+        </label>
+        <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="username" name="username" placeholder="Your username" required>
+      </div>
+      <div class="mb-4">
+        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-gray-700" for="password">
+          Password
+        </label>
+        <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="password" name="password" placeholder="Your password" required type="password">
+      </div>
+      <button class="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors" type="submit">
+        Sign in
+      </button>
+    </form>
+    <p class="text-center text-sm text-gray-500 mt-4">
+      Don't have an account? <a class="text-blue-500 hover:underline" href="{{ url_for('signup') }}">Sign up</a>
+    </p>
+  </div>
+</body>
+</html>
