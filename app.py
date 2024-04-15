@@ -44,7 +44,7 @@ def find_similar_question(query, user_role):
 def prompt_next_question(query, user_role):
     similar_question = find_similar_question(query, user_role)
     if similar_question:
-        predefined_questions_file = f"{user_role.lower().replace(' ', '_')}_predefined_questions.json"
+        predefined_questions_file = f"{user_role.lower().replace(' ', '_')}_Predefined_questions.json"
         
         # Check if the predefined questions file exists
         if os.path.exists(predefined_questions_file):
@@ -158,7 +158,8 @@ def process_and_display_sql(question, user_role):
             if not df.empty:
                 # Convert DataFrame to an HTML table with proper formatting
                 table_html = generate_responsive_table(df)
-                output = f'Bot: Here are the results of the query:<br>{table_html}'
+                #output = f'Bot: Here are the results of the query:<br>{table_html}'
+                output = f'<div class="qtext">Bot: Here are the results of the query:</div><br>{table_html}'
             else:
                 output = "Bot: No data found for the given query."
         except Exception as e:
@@ -173,14 +174,15 @@ def process_and_display_sql(question, user_role):
     return output, table_html
 
 def generate_responsive_table(df):
-    table_html = df.to_html(index=False, classes='table table-bordered custom-table', escape=False)
-    table_html = table_html.replace('<table', '<table style="font-size: 12px; max-width: 100%; width: 100%;"')
-    table_html = table_html.replace('<th', '<th style="padding: 10px; background-color: #3498db; color: #fff;"')
-    table_html = table_html.replace('<td', '<td style="padding: 8px;"')
-
+    table_html = df.to_html(index=False, escape=False)
+    table_html = table_html.replace('<table', 
+    '<table style="font-size: 12px;text-align:center;border:0;"')
+    table_html = table_html.replace('<tr', 
+    '<tr style="padding:10px; text-align: center; text-transform:uppercase;"')
+    table_html = table_html.replace('<td', '<td style="padding:10px;text-align: center"')
     # Add responsive table styles
     table_html = f"""
-    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+    <div class="table-responsive" style="max-height: 350px;">
         {table_html}
     </div>
     """

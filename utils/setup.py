@@ -1,5 +1,4 @@
 import os
-import streamlit as st
 import vanna as vn
 from dotenv import load_dotenv
 from vanna.remote import VannaDefault
@@ -7,7 +6,6 @@ from vanna.remote import VannaDefault
 os.environ['REQUESTS_CA_BUNDLE'] = 'cert.crt'
 
 
-@st.cache_resource(ttl=3600)
 def setup_connexion():
     
         load_dotenv()
@@ -22,5 +20,4 @@ def setup_connexion():
 #vanna_model_name = # Your model name from https://vanna.ai/account/profile 
 #vn = VannaDefault(model=vanna_model_name, api_key=api_key)
 
-def setup_session_state():
-    st.session_state["my_question"] = None
+

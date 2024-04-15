@@ -1,4 +1,4 @@
-import streamlit as st
+
 import vanna 
 import os
 from sql_execution import execute_sql_query
@@ -11,7 +11,7 @@ vanna_model_name = "esp_model"
 vn = VannaDefault(model=vanna_model_name, api_key=api_key)
 
 
-@st.cache_data(show_spinner="Generating sample questions ...")
+
 def generate_questions_cached():
     return vn.generate_questions()
 
@@ -27,17 +27,17 @@ def run_sql_cached(sql: str):
     return execute_sql_query(sql=sql)
 
 
-@st.cache_data(show_spinner="Generating Plotly code ...")
+
 def generate_plotly_code_cached(question, sql, df):
     code = vn.generate_plotly_code(question=question, sql=sql, df=df)
     return code
 
 
-@st.cache_data(show_spinner="Running Plotly code ...")
+
 def generate_plot_cached(code, df):
     return vn.get_plotly_figure(plotly_code=code, df=df)
 
 
-@st.cache_data(show_spinner="Generating followup questions ...")
+
 def generate_followup_cached(question, df):
     return vn.generate_followup_questions(question=question, df=df)
