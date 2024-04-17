@@ -3,63 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generative AI Chatbot</title>
+  <title>Generative AI RCA Framework for Supply Chain Planning</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <div class="chatbot-header">
-    <div class="logo">
-      <i class="fas fa-robot"></i><div class="question">Generative AI RCA Framework for Supply Chain Planning</div>
-    </div>
-    <a href="{{ url_for('logout') }}" class="logout-link">
-      <i class="fas fa-sign-out-alt"></i> Logout
-    </a>
-  </div>
-
-  <div class="navbar">
-    {% if next_question %}
-      <div class="question">Suggested Next Question:</div> 
-      <div class="qcard">{{ next_question }}</div> 
-    {% endif %}
-    {% if top_5_questions %}
-      <div class="question">Top 5 Questions:</div> 
-      {% for question in top_5_questions %}
-      <div class="qcard">{{ question }}</div> 
-      {% endfor %}
-    {% endif %}
-  </div>
-  
-  <div class="chatbox">
-    <div class="chat-history">
-      <div class="question">Hey {{ session['username'] }}! How can I help you today?</div>
-      {% if past and generated %}
-        {% for user_input, generated_response in zip(past, generated) %}
-          <div class="qcard">{{ user_input }}</div>
-          {% if table_html %}
-            <div class="table-container">
-              {{ table_html|safe }}
-            </div>
-          {% else %}
-            {{ generated_response }}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    </div>
-    <div class="chat-input">
-      <form id="chat-form" method="post" action="{{ url_for('chat') }}">
-        <div class="input-group">
-          <input type="text" id="user_input" name="user_input" placeholder="Type your message..." required style="width: 500px;">
-          <button type="submit" class="send-btn">
-            <i class="fas fa-paper-plane"></i>
-          </button>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI RCA Framework for Supply Chain Planning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="chatbot-container">
+        <div class="side-panel">
+          <ul>
+            <li class="top"><a href="#"><i class="fas fa-home"></i></a></li>
+            <!-- Add more list items for other options -->
+            <li class="bottom"><a href="#"><i class="fas fa-cog"></i></a></li>
+          </ul>
         </div>
-      </form>
+        <div class="chatbot-header">
+          <div class="logo">
+            <i class="fas fa-robot"></i>
+            <h1>Generative AI RCA Framework for Supply Chain Planning</h1>
+          </div>
+          <a href="{{ url_for('logout') }}" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+        <div class="chat-window">
+          <div class="chat-history">
+            {% if past and generated %}
+              {% for user_input, generated_response in zip(past, generated) %}
+                <div class="message user">
+                  <!--<div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>-->
+                  <div class="message-content">{{ user_input }}</div>
+                </div>
+                <div class="message bot">
+                  <!--<div class="bot-avatar">
+                    <i class="fas fa-robot"></i>
+                  </div>-->
+                  <div class="message-content">
+                    {% if table_html %}
+                      <div class="table-container">
+                        {{ table_html|safe }}
+                      </div>
+                    {% else %}
+                      {{ generated_response }}
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+            <div class="message bot">
+              <div class="bot-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="message-content">
+                Hey {{ session['username'] }}! How can I help you today?
+              </div>
+              <div class="clearfix"></div> 
+            </div>
+          </div>
+          
+          <div class="processing-icon" id="processing-icon"></div>
+          <div class="top-questions">
+            {% if next_question %}
+              <h3 class="next-question">Suggested Next Question:</h3>
+              <p>{{ next_question }}</p>
+            {% endif %}
+            {% if top_5_questions %}
+              <h3 class="top-question-heading">Top 5 Questions:</h3>
+              <div class="top-questions-container">
+                {% for question in top_5_questions %}
+                  <div class="question-box">
+                    <a href="#" class="suggestion" onclick="insertQuestion('{{ question }}')">{{ question }}</a>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          <div>
+            <form id="chat-form" method="post" action="{{ url_for('chat') }}">
+              <div class="input-group">
+                <input type="text" id="user_input" name="user_input" placeholder="Enter the prompt" required>
+                <button type="submit" class="send-btn">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  
-  
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
 </html>
